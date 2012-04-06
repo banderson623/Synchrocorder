@@ -14,6 +14,15 @@
 		B1C0D46A152D01A300339C67 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C0D468152D01A300339C67 /* MainMenu.xib */; };
 		B1C0D46D152D01A300339C67 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = B1C0D46C152D01A300339C67 /* rb_main.rb */; };
 		B1C0D46F152D01A300339C67 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = B1C0D46E152D01A300339C67 /* AppDelegate.rb */; };
+		B1C53A06152F5E8D00EAC220 /* check_24.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A02152F5E8D00EAC220 /* check_24.png */; };
+		B1C53A07152F5E8D00EAC220 /* check_48.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A03152F5E8D00EAC220 /* check_48.png */; };
+		B1C53A08152F5E8D00EAC220 /* x_24.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A04152F5E8D00EAC220 /* x_24.png */; };
+		B1C53A09152F5E8D00EAC220 /* x_48.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A05152F5E8D00EAC220 /* x_48.png */; };
+		B1C53A0C152F5EA100EAC220 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A0B152F5EA100EAC220 /* Icon.png */; };
+		B1C53A0E152F5EAE00EAC220 /* PresentationObservation.rb in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A0D152F5EAE00EAC220 /* PresentationObservation.rb */; };
+		B1C53A10152F5F6800EAC220 /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A0F152F5F6800EAC220 /* 01-refresh.png */; };
+		B1C53A13152F630800EAC220 /* warn_24.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A12152F630800EAC220 /* warn_24.png */; };
+		B1C53A15152F661D00EAC220 /* AudioController.rb in Resources */ = {isa = PBXBuildFile; fileRef = B1C53A14152F661D00EAC220 /* AudioController.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +47,15 @@
 		B1C0D46C152D01A300339C67 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		B1C0D46E152D01A300339C67 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		B1C0D478152D022600339C67 /* Synchrocorder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Synchrocorder.entitlements; sourceTree = "<group>"; };
+		B1C53A02152F5E8D00EAC220 /* check_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_24.png; sourceTree = "<group>"; };
+		B1C53A03152F5E8D00EAC220 /* check_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_48.png; sourceTree = "<group>"; };
+		B1C53A04152F5E8D00EAC220 /* x_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x_24.png; sourceTree = "<group>"; };
+		B1C53A05152F5E8D00EAC220 /* x_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x_48.png; sourceTree = "<group>"; };
+		B1C53A0B152F5EA100EAC220 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B1C53A0D152F5EAE00EAC220 /* PresentationObservation.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PresentationObservation.rb; sourceTree = "<group>"; };
+		B1C53A0F152F5F6800EAC220 /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
+		B1C53A12152F630800EAC220 /* warn_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warn_24.png; sourceTree = "<group>"; };
+		B1C53A14152F661D00EAC220 /* AudioController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AudioController.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				B1C0D478152D022600339C67 /* Synchrocorder.entitlements */,
+				B1C53A0D152F5EAE00EAC220 /* PresentationObservation.rb */,
+				B1C53A14152F661D00EAC220 /* AudioController.rb */,
 				B1C0D46E152D01A300339C67 /* AppDelegate.rb */,
 				B1C0D467152D01A300339C67 /* Resources */,
 				B1C0D46B152D01A300339C67 /* Other Sources */,
@@ -105,7 +125,14 @@
 		B1C0D467152D01A300339C67 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B1C0D468152D01A300339C67 /* MainMenu.xib */,
+				B1C53A0F152F5F6800EAC220 /* 01-refresh.png */,
+				B1C53A0B152F5EA100EAC220 /* Icon.png */,
+				B1C53A02152F5E8D00EAC220 /* check_24.png */,
+				B1C53A03152F5E8D00EAC220 /* check_48.png */,
+				B1C53A04152F5E8D00EAC220 /* x_24.png */,
+				B1C53A12152F630800EAC220 /* warn_24.png */,
+				B1C53A05152F5E8D00EAC220 /* x_48.png */,
+				B1C53A11152F61EC00EAC220 /* New Group */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -116,6 +143,14 @@
 				B1C0D46C152D01A300339C67 /* rb_main.rb */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		B1C53A11152F61EC00EAC220 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0D468152D01A300339C67 /* MainMenu.xib */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +226,15 @@
 				B1C0D46A152D01A300339C67 /* MainMenu.xib in Resources */,
 				B1C0D46D152D01A300339C67 /* rb_main.rb in Resources */,
 				B1C0D46F152D01A300339C67 /* AppDelegate.rb in Resources */,
+				B1C53A06152F5E8D00EAC220 /* check_24.png in Resources */,
+				B1C53A07152F5E8D00EAC220 /* check_48.png in Resources */,
+				B1C53A08152F5E8D00EAC220 /* x_24.png in Resources */,
+				B1C53A09152F5E8D00EAC220 /* x_48.png in Resources */,
+				B1C53A0C152F5EA100EAC220 /* Icon.png in Resources */,
+				B1C53A0E152F5EAE00EAC220 /* PresentationObservation.rb in Resources */,
+				B1C53A10152F5F6800EAC220 /* 01-refresh.png in Resources */,
+				B1C53A13152F630800EAC220 /* warn_24.png in Resources */,
+				B1C53A15152F661D00EAC220 /* AudioController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +389,7 @@
 				B1C0D474152D01A300339C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1C0D475152D01A300339C67 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -353,6 +398,7 @@
 				B1C0D477152D01A300339C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

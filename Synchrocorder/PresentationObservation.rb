@@ -12,7 +12,7 @@ module PresentationObservation
         
         def initialize
             @app=nil 
-            #@systemEvents = SBApplication.applicationWithBundleIdentifier("com.apple.SystemEvents")
+            @systemEvents = SBApplication.applicationWithBundleIdentifier("com.apple.SystemEvents")
             initializeIfRunning
         end
         
@@ -34,8 +34,8 @@ module PresentationObservation
         
         # check if the app is running
         def isRunning?
-            `ps aux | grep -i '#{getApplicationName}'`.split("\n").size > 2
-            #!(@systemEvents.processes.detect{|p|p.name.include?(getApplicationName)}).nil?
+            #`ps aux | grep -i '#{getApplicationName}'`.split("\n").size > 2
+            !(@systemEvents.processes.detect{|p|p.name.include?(getApplicationName)}).nil?
         end
         
         # Check if a window is open

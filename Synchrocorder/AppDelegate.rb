@@ -11,19 +11,34 @@ class AppDelegate
     attr_accessor :presentationImageField, :presentationApplicationLabel, :presentationApplicationStatus
     attr_accessor :recordingImageField, :recordingApplicationLabel, :recordingApplicationStatus
     
+    attr_accessor :startRecordingButton
+    attr_accessor :stopRecordingButton
+    
+    ERROR_ICON = "x_24.png"
+    WARNING_ICON = "warn_24.png"
+    GOOD_ICON = "check_24.png"
+    
     def applicationDidFinishLaunching(a_notification)
         # Insert code here to initialize your application
         puts "loading!"
         @presentationObserver = nil
-        #@presentationImageField.setImage(NSImage.alloc.initByReferencingURL(NSURL.alloc.initWithString("x_24.png")))
-        @presentationImageField.setImage(NSImage.imageNamed("x_24.png"))
-        #@presentationImageField.setImage("x_24.png")
-        #@recordingImageField.setImage("Resources/x_24.png")
-        startDiscoveryTimer(5)
+        @recordingController = AudioController::SoundStudio.new
+        @presentationImageField.setImage(NSImage.imageNamed(ERROR_ICON))
+        @recordingImageField.setImage(NSImage.imageNamed(ERROR_ICON))
+
+        @startRecordingButton.setEnabled(false)
+        @stopRecordingButton.setEnabled(false)
+        
+        startDiscoveryTimer(15)
         checkPresentationStatus
         checkRecordingStatus
+        
+        if(@presentationReady && @recordingReady)
+            @startRecordingButton.setEnabled(true)
+        end
         @presentationReady = false
         @recordingReady = false
+        
 
     end
     
@@ -43,6 +58,9 @@ class AppDelegate
     end
     
     def startPauseRecording(sender)
+        @startRecordingButton.setTitle("Pause Recording")
+        @stopRecordingButton.setEnabled(true)
+        
     end
     
     def stopRecording(sender)
@@ -51,17 +69,46 @@ class AppDelegate
     def discoveryTimerHandler(userInfo)
         if(@presentationReady && @recordingReady)
             stopDiscoveryTimer()
+            @startRecordingButton.setEnabled(true)
         else
+            @startRecordingButton.setEnabled(false)
             checkPresentationStatus
             checkRecordingStatus
         end
     end
     
+    def checkRecordingStatusButton(sender)
+        puts "Checking status..."
+        checkPresentationStatus
+        checkRecordingStatus
+        if(@presentationReady && @recordingReady)
+            @startRecordingButton.setEnabled(true)
+        else
+            @startRecordingButton.setEnabled(false)
+        end
+    end
+    
     def checkRecordingStatus
-        @recordingApplicationLabel.setStringValue("Waiting...")
-        @recordingApplicationStatus.setStringValue("...for SoundStudio to launch")
-        @recordingImageField.setImage(NSImage.imageNamed("x_24.png"))
-        @recordingReady = true
+        @recordingReady = false
+
+        if(@recordingController.isRunning?)
+            @recordingApplicationLabel.setStringValue("Controlling " + @recordingController.getApplicationName())
+
+            if(@recordingController.isReadyToRecord?)
+                @recordingApplicationStatus.setStringValue("Recording to: " + @recordingController.getFileName())
+                @recordingImageField.setImage(NSImage.imageNamed(GOOD_ICON))
+                @recordingReady = true
+            else
+                @recordingApplicationStatus.setStringValue("Not Ready to record, please create a new file")
+                @recordingImageField.setImage(NSImage.imageNamed(WARNING_ICON))
+            end 
+            
+        else
+            @recordingApplicationLabel.setStringValue("Waiting...")
+            @recordingApplicationStatus.setStringValue("...for SoundStudio to launch")
+            @recordingImageField.setImage(NSImage.imageNamed(WARNING_ICON))
+        
+        end
     end
     
     def checkPresentationStatus
@@ -71,14 +118,16 @@ class AppDelegate
         
         # if initialzed then poll..
         if(!@presentationObserver.nil?)
-            @presentationImageField.setImage(NSImage.imageNamed("check_24.png"))
+            @presentationImageField.setImage(NSImage.imageNamed(GOOD_ICON))
             @presentationApplicationLabel.setStringValue("Observing " + @presentationObserver.getApplicationName())
             if(@presentationObserver.hasPresentationOpen?)
                 @presentationApplicationStatus.setStringValue("Presentation: #{@presentationObserver.getPresentationName()}")
                 @presentationReady = true
+            else
+                @presentationApplicationStatus.setStringValue("Waiting for presentation to open")
             end
         else
-            @presentationImageField.setImage(NSImage.imageNamed("x_24.png"))
+            @presentationImageField.setImage(NSImage.imageNamed(WARNING_ICON))
             @presentationApplicationLabel.setStringValue("Waiting...")
             @presentationApplicationStatus.setStringValue("...for PowerPoint or Keynote to Launch")
         end
