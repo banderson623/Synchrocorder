@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1C0D458152D01A300339C67 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C0D457152D01A300339C67 /* Cocoa.framework */; };
+		B1C0D45A152D01A300339C67 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C0D459152D01A300339C67 /* MacRuby.framework */; };
+		B1C0D463152D01A300339C67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1C0D461152D01A300339C67 /* InfoPlist.strings */; };
+		B1C0D465152D01A300339C67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C0D464152D01A300339C67 /* main.m */; };
+		B1C0D46A152D01A300339C67 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C0D468152D01A300339C67 /* MainMenu.xib */; };
+		B1C0D46D152D01A300339C67 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = B1C0D46C152D01A300339C67 /* rb_main.rb */; };
+		B1C0D46F152D01A300339C67 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = B1C0D46E152D01A300339C67 /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1C0D45C152D01A300339C67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1C0D44A152D01A300339C67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1C0D452152D01A300339C67;
+			remoteInfo = Synchrocorder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B1C0D453152D01A300339C67 /* Synchrocorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synchrocorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C0D457152D01A300339C67 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B1C0D459152D01A300339C67 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		B1C0D460152D01A300339C67 /* Synchrocorder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Synchrocorder-Info.plist"; sourceTree = "<group>"; };
+		B1C0D462152D01A300339C67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B1C0D464152D01A300339C67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1C0D466152D01A300339C67 /* Synchrocorder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Synchrocorder-Prefix.pch"; sourceTree = "<group>"; };
+		B1C0D469152D01A300339C67 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B1C0D46C152D01A300339C67 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		B1C0D46E152D01A300339C67 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		B1C0D478152D022600339C67 /* Synchrocorder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Synchrocorder.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1C0D450152D01A300339C67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C0D458152D01A300339C67 /* Cocoa.framework in Frameworks */,
+				B1C0D45A152D01A300339C67 /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1C0D448152D01A300339C67 = {
+			isa = PBXGroup;
+			children = (
+				B1C0D45E152D01A300339C67 /* Synchrocorder */,
+				B1C0D456152D01A300339C67 /* Frameworks */,
+				B1C0D454152D01A300339C67 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1C0D454152D01A300339C67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0D453152D01A300339C67 /* Synchrocorder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1C0D456152D01A300339C67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0D457152D01A300339C67 /* Cocoa.framework */,
+				B1C0D459152D01A300339C67 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1C0D45E152D01A300339C67 /* Synchrocorder */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0D478152D022600339C67 /* Synchrocorder.entitlements */,
+				B1C0D46E152D01A300339C67 /* AppDelegate.rb */,
+				B1C0D467152D01A300339C67 /* Resources */,
+				B1C0D46B152D01A300339C67 /* Other Sources */,
+				B1C0D45F152D01A300339C67 /* Supporting Files */,
+			);
+			path = Synchrocorder;
+			sourceTree = "<group>";
+		};
+		B1C0D45F152D01A300339C67 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0D460152D01A300339C67 /* Synchrocorder-Info.plist */,
+				B1C0D461152D01A300339C67 /* InfoPlist.strings */,
+				B1C0D464152D01A300339C67 /* main.m */,
+				B1C0D466152D01A300339C67 /* Synchrocorder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1C0D467152D01A300339C67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0D468152D01A300339C67 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B1C0D46B152D01A300339C67 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0D46C152D01A300339C67 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		B1C0D45B152D01A300339C67 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = B1C0D475152D01A300339C67 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				B1C0D45D152D01A300339C67 /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		B1C0D452152D01A300339C67 /* Synchrocorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1C0D472152D01A300339C67 /* Build configuration list for PBXNativeTarget "Synchrocorder" */;
+			buildPhases = (
+				B1C0D44F152D01A300339C67 /* Sources */,
+				B1C0D450152D01A300339C67 /* Frameworks */,
+				B1C0D451152D01A300339C67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Synchrocorder;
+			productName = Synchrocorder;
+			productReference = B1C0D453152D01A300339C67 /* Synchrocorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1C0D44A152D01A300339C67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Aeroflex;
+			};
+			buildConfigurationList = B1C0D44D152D01A300339C67 /* Build configuration list for PBXProject "Synchrocorder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B1C0D448152D01A300339C67;
+			productRefGroup = B1C0D454152D01A300339C67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1C0D452152D01A300339C67 /* Synchrocorder */,
+				B1C0D45B152D01A300339C67 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1C0D451152D01A300339C67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C0D463152D01A300339C67 /* InfoPlist.strings in Resources */,
+				B1C0D46A152D01A300339C67 /* MainMenu.xib in Resources */,
+				B1C0D46D152D01A300339C67 /* rb_main.rb in Resources */,
+				B1C0D46F152D01A300339C67 /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1C0D44F152D01A300339C67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C0D465152D01A300339C67 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1C0D45D152D01A300339C67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1C0D452152D01A300339C67 /* Synchrocorder */;
+			targetProxy = B1C0D45C152D01A300339C67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B1C0D461152D01A300339C67 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1C0D462152D01A300339C67 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B1C0D468152D01A300339C67 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1C0D469152D01A300339C67 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1C0D470152D01A300339C67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B1C0D471152D01A300339C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B1C0D473152D01A300339C67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Synchrocorder/Synchrocorder-Prefix.pch";
+				INFOPLIST_FILE = "Synchrocorder/Synchrocorder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B1C0D474152D01A300339C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Synchrocorder/Synchrocorder-Prefix.pch";
+				INFOPLIST_FILE = "Synchrocorder/Synchrocorder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B1C0D476152D01A300339C67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		B1C0D477152D01A300339C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1C0D44D152D01A300339C67 /* Build configuration list for PBXProject "Synchrocorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1C0D470152D01A300339C67 /* Debug */,
+				B1C0D471152D01A300339C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1C0D472152D01A300339C67 /* Build configuration list for PBXNativeTarget "Synchrocorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1C0D473152D01A300339C67 /* Debug */,
+				B1C0D474152D01A300339C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B1C0D475152D01A300339C67 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1C0D476152D01A300339C67 /* Debug */,
+				B1C0D477152D01A300339C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1C0D44A152D01A300339C67 /* Project object */;
+}

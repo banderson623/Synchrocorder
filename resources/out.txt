@@ -1,0 +1,47 @@
+ffmpeg version 0.8, Copyright (c) 2000-2011 the FFmpeg developers
+  built on Mar 30 2012 12:50:33 with clang 3.0 (tags/Apple/clang-210.3)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/0.8 --enable-gpl --enable-version3 --enable-nonfree --enable-hardcoded-tables --enable-libx264 --enable-libfaac --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libxvid --cc=clang
+  libavutil    51.  9. 1 / 51.  9. 1
+  libavcodec   53.  7. 0 / 53.  7. 0
+  libavformat  53.  4. 0 / 53.  4. 0
+  libavdevice  53.  1. 1 / 53.  1. 1
+  libavfilter   2. 23. 0 /  2. 23. 0
+  libswscale    2.  0. 0 /  2.  0. 0
+  libpostproc  51.  2. 0 / 51.  2. 0
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f9533807c00] max_analyze_duration 5000000 reached at 5015510
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '2012_04_04_audio_sunday.m4a':
+  Metadata:
+    major_brand     : M4A 
+    minor_version   : 0
+    compatible_brands: M4A mp42isom
+    creation_time   : 2012-04-03 19:41:28
+    title           : Test File
+    artist          : Brian's Computer
+    album           : Album
+    genre           : Spoken Word
+    date            : 2012
+    copyright       : CityChurch
+    encoder         : Sound Studio 3
+  Duration: 00:00:11.51, start: 0.000000, bitrate: 363 kb/s
+    Chapter #0.0: start 0.000000, end 4.063651
+    Metadata:
+      title           : Intro
+    Chapter #0.1: start 4.063651, end 7.103651
+    Metadata:
+      title           : Marker 1
+    Chapter #0.2: start 7.103651, end 7.871655
+    Metadata:
+      title           : Marker 2
+    Chapter #0.3: start 7.871655, end 9.386327
+    Metadata:
+      title           : Marker 3
+    Chapter #0.4: start 9.386327, end 11.517098
+    Metadata:
+      title           : Marker 4
+    Stream #0.0(eng): Audio: aac, 44100 Hz, stereo, s16, 96 kb/s
+    Metadata:
+      creation_time   : 2012-04-03 19:41:28
+    Stream #0.1(eng): Subtitle: text / 0x74786574, 0 kb/s
+    Metadata:
+      creation_time   : 2012-04-03 19:41:28
+At least one output file must be specified
