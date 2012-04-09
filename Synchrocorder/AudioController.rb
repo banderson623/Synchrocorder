@@ -17,7 +17,9 @@ module AudioController
         
         
         # ---- INTERFACE
-
+        def launch!
+            SBApplication.applicationWithBundleIdentifier(getBundleIdentifier).activate
+        end
         
         def isRunning?
             if(!@running)
@@ -101,6 +103,21 @@ module AudioController
         
         def isReadyToRecord?
             isRunning? && @app.documents.size > 0 && !isRecording?
+        end
+        
+        def insertMarkerNowWithLabel(label)
+            false
+            if(isRecording?)
+                # tell front document
+                #@app.document[0]
+                #set markerTime to sample count
+                marterTime = @app.document[0].sampleCount
+                marker = @app.classForScriptingClass("marker")
+                marker.name = label
+                marker.position = markerTime
+                #make new marker with properties {position:markerTime, name:markerName}
+                #end tell
+            end
         end
         
         def getFileName

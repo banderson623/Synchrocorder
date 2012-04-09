@@ -9,14 +9,14 @@ class AppDelegate
     
     attr_accessor :window 
     attr_accessor :presentationImageField, :presentationApplicationLabel, :presentationApplicationStatus
-    attr_accessor :recordingImageField, :recordingApplicationLabel, :recordingApplicationStatus
+    attr_accessor :recordingImageField,    :recordingApplicationLabel,    :recordingApplicationStatus
     
     attr_accessor :startRecordingButton
     attr_accessor :stopRecordingButton
     
-    ERROR_ICON = "x_24.png"
-    WARNING_ICON = "warn_24.png"
-    GOOD_ICON = "check_24.png"
+    ERROR_ICON =    "x_24.png"
+    WARNING_ICON =  "warn_24.png"
+    GOOD_ICON =     "check_24.png"
     
     def applicationDidFinishLaunching(a_notification)
         # Insert code here to initialize your application
@@ -125,6 +125,7 @@ class AppDelegate
                 @presentationReady = true
             else
                 @presentationApplicationStatus.setStringValue("Waiting for presentation to open")
+                @presentationImageField.setImage(NSImage.imageNamed(WARNING_ICON))
             end
         else
             @presentationImageField.setImage(NSImage.imageNamed(WARNING_ICON))
