@@ -60,7 +60,7 @@ class AppDelegate
     def startPauseRecording(sender)
         @startRecordingButton.setTitle("Pause Recording")
         @stopRecordingButton.setEnabled(true)
-        
+        @recordingController.record()
     end
     
     def stopRecording(sender)
@@ -71,9 +71,7 @@ class AppDelegate
             stopDiscoveryTimer()
             @startRecordingButton.setEnabled(true)
         else
-            @startRecordingButton.setEnabled(false)
-            checkPresentationStatus
-            checkRecordingStatus
+            checkRecordingStatusButton()
         end
     end
     

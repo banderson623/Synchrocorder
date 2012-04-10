@@ -4,14 +4,13 @@ end
 
 
 module AudioController
-    class Base
-        
-
-
+    class Base        
+        attr_reader :app
         
         def initialize
             @app=nil 
             @systemEvents = SBApplication.applicationWithBundleIdentifier("com.apple.SystemEvents")
+            isRunning?
             @running = false
         end
         
@@ -28,7 +27,6 @@ module AudioController
                     @app  = SBApplication.applicationWithBundleIdentifier(getBundleIdentifier)
                 end
             end
-            
             @running
         end
         
@@ -98,7 +96,7 @@ module AudioController
         def getApplicationName; "Sound Studio"; end;
         
         def isRecording?
-            isRunning? && @app.recording?
+            isRunning? && @app.isRecording
         end
         
         def isReadyToRecord?
@@ -106,17 +104,12 @@ module AudioController
         end
         
         def insertMarkerNowWithLabel(label)
-            false
             if(isRecording?)
-                # tell front document
-                #@app.document[0]
-                #set markerTime to sample count
-                marterTime = @app.document[0].sampleCount
-                marker = @app.classForScriptingClass("marker")
-                marker.name = label
-                marker.position = markerTime
-                #make new marker with properties {position:markerTime, name:markerName}
-                #end tell
+                markerTime = @app.documents[0].sampleCount
+                marker = @app.classForScriptingClass("marker").alloc.init
+                @app.documents[0].markers.addObject(marker)
+                marker.setName(label)
+                marker.setPosition(markerTime)
             end
         end
         
@@ -128,8 +121,32 @@ module AudioController
             end
         end
         
+        def stopRecording
+            if(isRecording?)
+                @app.documents[0].pause
+                @app.documents[0].stop
+                return true
+            else
+                return false
+            end
+        end
+        
         def startRecording!
-           @app.documents[0].record
+            @app.documents[0].record
+        end
+        
+        def getMarkersAsAnArray
+            all = @app.classForScriptingClass("sound selection").alloc.init
+            @app.addObject(all)
+            #all.startTime(0)
+            ##all.endTime(@app.documents[0].totalTime)
+            #all.firstTrack(0)
+            #all.trackCount(2)
+            all.copy()
+            copied = IO.popen('pbpaste', 'r+').read
+            if(copied)
+                puts copied.split("\n")
+            end
         end
     end
     
@@ -137,13 +154,14 @@ end
 
 
 ss = AudioController::SoundStudio.new
-puts "Is running: #{ss.isRunning?}";
-puts "Is recording: #{ss.isRecording?}";
-puts "Is ready to record: #{ss.isReadyToRecord?}";
-
-puts "Is filename: #{ss.getFileName}";
-
+puts "Markers"
+puts ss.getMarkersAsAnArray
+#puts "Is running: #{ss.isRunning?}";
+#puts "Is recording: #{ss.isRecording?}";
+#puts "Is ready to record: #{ss.isReadyToRecord?}";
+#puts "Is filename: #{ss.getFileName}";
 #puts "Is start Recording: #{ss.startRecording!}";
-puts "Is recording: #{ss.isRecording?}";
+#puts "Is recording: #{ss.isRecording?}";
+#puts "Adding Marker"; ss.insertMarkerNowWithLabel("Hello")
 
 

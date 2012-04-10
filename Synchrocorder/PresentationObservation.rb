@@ -52,6 +52,10 @@ module PresentationObservation
             false 
         end
         
+        def present!
+            false
+        end
+        
         def getSlideNumber
             -1
         end
