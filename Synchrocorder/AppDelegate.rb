@@ -14,6 +14,8 @@ class AppDelegate
     attr_accessor :startRecordingButton
     attr_accessor :stopRecordingButton
     
+    attr_accessor :exportRecording
+    
     ERROR_ICON =    "x_24.png"
     WARNING_ICON =  "warn_24.png"
     GOOD_ICON =     "check_24.png"
@@ -48,6 +50,10 @@ class AppDelegate
                                                         selector: "discoveryTimerHandler:",
                                                         userInfo: nil,
                                                         repeats: true)
+    end
+    
+    def exportRecording(sender)
+        ExportController.prepareForExport(window)
     end
     
     def stopDiscoveryTimer

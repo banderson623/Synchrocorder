@@ -9,6 +9,7 @@ module AudioController
         
         def initialize
             @app=nil 
+            setBitRateInKbps(96)
             @systemEvents = SBApplication.applicationWithBundleIdentifier("com.apple.SystemEvents")
             isRunning?
             @running = false
@@ -83,6 +84,12 @@ module AudioController
             ""
         end
         
+        def saveAsAACFileAt(path)
+        end
+        
+        def setBitRateInKbps(kps); @bitrate=kps * 1024; end
+        
+        
         private
         
         def getBundleIdentifier; "....."; end
@@ -148,14 +155,23 @@ module AudioController
                 puts copied.split("\n")
             end
         end
+        
+        def saveAsAACFileAt(path)
+            # Have a document
+            if(isRunning? && @app.documents.size > 0)
+                #set the bitrate at 96kps.
+                @app.documents[0].bitRate=@bitrate
+                @app.documents[0].saveIn(path, as:"AAC (m4a) Audio")
+            end
+        end
     end
     
 end
 
 
 ss = AudioController::SoundStudio.new
-puts "Markers"
-puts ss.getMarkersAsAnArray
+#puts "Markers"
+#puts ss.getMarkersAsAnArray
 #puts "Is running: #{ss.isRunning?}";
 #puts "Is recording: #{ss.isRecording?}";
 #puts "Is ready to record: #{ss.isReadyToRecord?}";

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B152361C155022B200BE372F /* ExportController.rb in Resources */ = {isa = PBXBuildFile; fileRef = B152361B155022B200BE372F /* ExportController.rb */; };
+		B152361E1550261900BE372F /* ExportWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B152361D1550261900BE372F /* ExportWindow.xib */; };
 		B1C0D458152D01A300339C67 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C0D457152D01A300339C67 /* Cocoa.framework */; };
 		B1C0D45A152D01A300339C67 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C0D459152D01A300339C67 /* MacRuby.framework */; };
 		B1C0D463152D01A300339C67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1C0D461152D01A300339C67 /* InfoPlist.strings */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B152361B155022B200BE372F /* ExportController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ExportController.rb; sourceTree = "<group>"; };
+		B152361D1550261900BE372F /* ExportWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExportWindow.xib; sourceTree = "<group>"; };
 		B1C0D453152D01A300339C67 /* Synchrocorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synchrocorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C0D457152D01A300339C67 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B1C0D459152D01A300339C67 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -104,6 +108,7 @@
 				B1C53A0D152F5EAE00EAC220 /* PresentationObservation.rb */,
 				B1C53A14152F661D00EAC220 /* AudioController.rb */,
 				B1C0D46E152D01A300339C67 /* AppDelegate.rb */,
+				B152361B155022B200BE372F /* ExportController.rb */,
 				B1C0D467152D01A300339C67 /* Resources */,
 				B1C0D46B152D01A300339C67 /* Other Sources */,
 				B1C0D45F152D01A300339C67 /* Supporting Files */,
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C0D468152D01A300339C67 /* MainMenu.xib */,
+				B152361D1550261900BE372F /* ExportWindow.xib */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -235,6 +241,8 @@
 				B1C53A10152F5F6800EAC220 /* 01-refresh.png in Resources */,
 				B1C53A13152F630800EAC220 /* warn_24.png in Resources */,
 				B1C53A15152F661D00EAC220 /* AudioController.rb in Resources */,
+				B152361C155022B200BE372F /* ExportController.rb in Resources */,
+				B152361E1550261900BE372F /* ExportWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
